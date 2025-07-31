@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8">
+    <title>Card Morphing Transition avec GSAP (Correctif Final)</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  </head>
+  <body>
+    <div class="cards-container">
+      <div class="card" data-title="Card 1" data-desc="Voici la description de la première carte.">
+        <div class="card-title">Card 1</div>
+        <div class="card-desc">Clique pour voir plus de détails !</div>
+      </div>
+      <div class="card" data-title="Card 2" data-desc="Deuxième carte, avec un autre texte de description.">
+        <div class="card-title">Card 2</div>
+        <div class="card-desc">Clique pour voir plus de détails !</div>
+      </div>
+      <div class="card" data-title="Card 3" data-desc="Une 3e carte pour tester la transition sur plusieurs éléments.">
+        <div class="card-title">Card 3</div>
+        <div class="card-desc">Clique pour voir plus de détails !</div>
+      </div>
+    </div>
+    <div id="circle-overlay"></div>
+    <div id="white-overlay"></div>
+    <div class="details-page" id="details-page">
+      <div class="details-title" id="details-title"></div>
+      <div class="details-desc" id="details-desc"></div>
+      <button class="close-btn" id="close-details">Fermer</button>
+    </div>
+  </body>
+</html>
