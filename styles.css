@@ -1,0 +1,88 @@
+body {
+  margin: 0; background: #f7f7fa; font-family: 'Segoe UI', sans-serif;
+}
+
+.cards-container {
+  display: flex; justify-content: center; gap: 30px; margin-top: 80px;
+}
+
+.card {
+  width: 240px; height: 320px; background: #fff; border-radius: 20px;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.07); padding: 42px 30px 30px 30px;
+  cursor: pointer; position: relative; z-index: 1; transition: box-shadow 0.2s;
+  overflow: hidden;
+}
+
+.card:hover { 
+  box-shadow: 0 8px 32px rgba(36,122,255,0.13); 
+}
+
+.card-title { 
+  font-size: 1.4em; 
+  font-weight: 600; 
+  margin-bottom: 0.6em; 
+  color: #222; 
+}
+
+.card-desc { 
+  color: #555; 
+  font-size: 1em; 
+}
+
+#circle-overlay, #white-overlay {
+  position: fixed; left: 50%; top: 50%; transform: translate(-50%,-50%) scale(0.5);
+  border-radius: 50%; pointer-events: none; z-index: 100;
+  width: 240px; height: 240px;
+  will-change: transform;
+  display: none;
+}
+
+#circle-overlay { 
+  background: #111; 
+}
+
+#white-overlay {
+  background: #fff; 
+  z-index:101; 
+}
+
+.details-page {
+  position: fixed; inset: 0; background: #fff;
+  z-index: 200; display: flex; flex-direction: column; align-items: center;
+  justify-content: center;
+  opacity: 0; pointer-events: none;
+  transition: opacity 0.3s;
+}
+
+.details-page.active { 
+  opacity: 1; 
+  pointer-events: auto; 
+}
+
+.details-title { 
+  font-size: 2em; 
+  margin-bottom: 0.6em; 
+}
+
+.details-desc { 
+  max-width: 440px; 
+  color: #444; 
+  font-size: 1.2em; 
+  text-align: center; 
+}
+
+.close-btn {
+  margin-top: 2.5em; 
+  background: #111; color: #fff;
+  border: none; 
+  border-radius: 8px; 
+  padding: 12px 36px; 
+  font-size: 1.1em;
+  cursor: pointer; 
+  font-weight: 600; 
+  transition: background 0.2s;
+}
+
+.close-btn:hover { 
+  background: #222; 
+}
